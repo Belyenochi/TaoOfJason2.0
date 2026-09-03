@@ -1,0 +1,98 @@
+# Hexo 8 site config. Values that describe the site (title, author, language,
+# permalink shape, search index) were read off the deployed pages when the
+# source was recovered; the rest are Hexo 8 defaults. The original _config.yml
+# was lost with the source tree.
+
+title: The Tao of Jason
+subtitle: ''
+description: ''
+keywords:
+author: Jason
+# NexT 5 called this zh-Hans; NexT 8 ships the language file as zh-CN.
+language: zh-CN
+timezone: Asia/Shanghai
+
+url: https://belyenochi.github.io
+# The deployed URLs are /YYYY/MM/DD/slug/ and every inbound link depends on
+# that. Do not change.
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true
+  trailing_html: true
+
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+new_post_name: :title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+
+# highlight.js with line numbers, as before; NexT renders the gutter.
+syntax_highlighter: highlight.js
+highlight:
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+default_category: uncategorized
+category_map:
+tag_map:
+
+meta_generator: true
+
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+updated_option: 'mtime'
+
+per_page: 10
+pagination_dir: page
+
+include:
+exclude:
+ignore:
+
+theme: next
+
+# hexo-generator-searchdb, read by NexT's local_search.
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
+
+# hexo-auto-excerpt: the old theme cut every index excerpt at 150 characters
+# (measured on the deployed index: 148-154). NexT 8 dropped that feature; this
+# plugin does the same thing at the post level so no <!-- more --> is needed.
+excerpt_length: 150
+
+deploy:
+  type: git
+  repo: git@github.com:Belyenochi/belyenochi.github.io.git
+  branch: master

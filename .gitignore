@@ -1,0 +1,9 @@
+node_modules/
+public/
+db.json
+.deploy_git/
+# Posts recovered from the generated site that must not be republished without
+# a decision: a letter the author removed from the live site by hand in 2025, a
+# work weekly report, and an empty stray draft. They live in the local working
+# copy only.
+_private/

@@ -1,0 +1,403 @@
+{
+  "public": [
+    {
+      "path": "2018/07/30/jsys_01_summary",
+      "title": "计算的要素-第一章小结",
+      "date": "2018-07-30T13:35:12+08:00",
+      "chars": 1472,
+      "categories": [
+        "计算机体系结构"
+      ],
+      "tags": [
+        "Nand2tetris"
+      ],
+      "code_blocks": 0,
+      "more": false,
+      "file": "jsys_01_summary.md"
+    },
+    {
+      "path": "2018/07/31/jsys_02_summary",
+      "title": "计算的要素-第二章小结",
+      "date": "2018-07-31T15:06:07+08:00",
+      "chars": 977,
+      "categories": [
+        "计算机体系结构"
+      ],
+      "tags": [
+        "Nand2tetris"
+      ],
+      "code_blocks": 0,
+      "more": false,
+      "file": "jsys_02_summary.md"
+    },
+    {
+      "path": "2018/08/01/jsys_03_summary",
+      "title": "计算的要素-第三章小结",
+      "date": "2018-08-01T15:15:38+08:00",
+      "chars": 1791,
+      "categories": [
+        "计算机体系结构"
+      ],
+      "tags": [
+        "Nand2tetris"
+      ],
+      "code_blocks": 0,
+      "more": false,
+      "file": "jsys_03_summary.md"
+    },
+    {
+      "path": "2018/08/02/jsys_04_summary",
+      "title": "计算的要素-第四章小结",
+      "date": "2018-08-02T19:52:00+08:00",
+      "chars": 1349,
+      "categories": [
+        "计算机体系结构"
+      ],
+      "tags": [
+        "Nand2tetris"
+      ],
+      "code_blocks": 0,
+      "more": false,
+      "file": "jsys_04_summary.md"
+    },
+    {
+      "path": "2018/08/04/jsys_05_summary",
+      "title": "计算的要素第五章小结",
+      "date": "2018-08-04T15:22:46+08:00",
+      "chars": 3538,
+      "categories": [
+        "计算机体系结构"
+      ],
+      "tags": [
+        "Nand2tetris"
+      ],
+      "code_blocks": 0,
+      "more": false,
+      "file": "jsys_05_summary.md"
+    },
+    {
+      "path": "2018/08/27/jsys_06_summary",
+      "title": "计算的要素-第六章小结",
+      "date": "2018-08-27T00:04:27+08:00",
+      "chars": 3016,
+      "categories": [
+        "计算机体系结构"
+      ],
+      "tags": [
+        "Nand2tetris"
+      ],
+      "code_blocks": 0,
+      "more": false,
+      "file": "jsys_06_summary.md"
+    },
+    {
+      "path": "2018/08/27/regex-engine-00",
+      "title": "从零开始的正则引擎之旅(零)",
+      "date": "2018-08-27T17:06:11+08:00",
+      "chars": 508,
+      "categories": [
+        "编译原理"
+      ],
+      "tags": [
+        "RegexEngine"
+      ],
+      "code_blocks": 0,
+      "more": false,
+      "file": "regex-engine-00.md"
+    },
+    {
+      "path": "2018/08/28/parser_00",
+      "title": "从零开始的编译原理之旅----Parser篇(零)",
+      "date": "2018-08-28T10:52:42+08:00",
+      "chars": 1881,
+      "categories": [
+        "编译原理"
+      ],
+      "tags": [
+        "parser"
+      ],
+      "code_blocks": 0,
+      "more": false,
+      "file": "parser_00.md"
+    },
+    {
+      "path": "2018/08/29/jsys_07-08_summary",
+      "title": "计算的要素第七-八章小结",
+      "date": "2018-08-29T19:19:23+08:00",
+      "chars": 4143,
+      "categories": [
+        "计算机体系结构"
+      ],
+      "tags": [
+        "Nand2tetris"
+      ],
+      "code_blocks": 0,
+      "more": false,
+      "file": "jsys_07-08_summary.md"
+    },
+    {
+      "path": "2018/08/31/iterator-00",
+      "title": "迭代器实现（零）",
+      "date": "2018-08-31T11:24:07+08:00",
+      "chars": 4022,
+      "categories": [],
+      "tags": [
+        "Jason Tomas的造轮子之旅"
+      ],
+      "code_blocks": 7,
+      "more": false,
+      "file": "iterator-00.md"
+    },
+    {
+      "path": "2018/09/01/jsys_12_summary",
+      "title": "计算的要素第十二章总结",
+      "date": "2018-09-01T23:05:16+08:00",
+      "chars": 3648,
+      "categories": [
+        "计算机体系结构"
+      ],
+      "tags": [
+        "Nand2tetris"
+      ],
+      "code_blocks": 3,
+      "more": false,
+      "file": "jsys_12_summary.md"
+    },
+    {
+      "path": "2018/09/03/parser_01",
+      "title": "从零开始的编译原理之旅----Parser篇(一)",
+      "date": "2018-09-03T23:32:19+08:00",
+      "chars": 11789,
+      "categories": [
+        "编译原理"
+      ],
+      "tags": [
+        "parser"
+      ],
+      "code_blocks": 7,
+      "more": false,
+      "file": "parser_01.md"
+    },
+    {
+      "path": "2018/09/04/parser_02",
+      "title": "从零开始的编译原理之旅----Parser篇(二)",
+      "date": "2018-09-04T20:53:18+08:00",
+      "chars": 7705,
+      "categories": [
+        "编译原理"
+      ],
+      "tags": [
+        "parser"
+      ],
+      "code_blocks": 1,
+      "more": false,
+      "file": "parser_02.md"
+    },
+    {
+      "path": "2018/09/06/parser_03",
+      "title": "从零开始的编译原理之旅----Parser篇(三)",
+      "date": "2018-09-06T18:41:10+08:00",
+      "chars": 6351,
+      "categories": [
+        "编译原理"
+      ],
+      "tags": [
+        "parser"
+      ],
+      "code_blocks": 2,
+      "more": false,
+      "file": "parser_03.md"
+    },
+    {
+      "path": "2018/09/06/parser_04",
+      "title": "从零开始的编译原理之旅----Parser篇(四)",
+      "date": "2018-09-06T21:39:10+08:00",
+      "chars": 5563,
+      "categories": [
+        "编译原理"
+      ],
+      "tags": [
+        "parser"
+      ],
+      "code_blocks": 6,
+      "more": false,
+      "file": "parser_04.md"
+    },
+    {
+      "path": "2018/09/07/design-pattern_00",
+      "title": "西天取经之设计模式之道（序言）",
+      "date": "2018-09-07T20:55:07+08:00",
+      "chars": 270,
+      "categories": [
+        "设计模式"
+      ],
+      "tags": [
+        "设计之道"
+      ],
+      "code_blocks": 0,
+      "more": false,
+      "file": "design-pattern_00.md"
+    },
+    {
+      "path": "2018/09/16/ucore-lab1",
+      "title": "ucore lab1实验小结",
+      "date": "2018-09-16T22:00:25+08:00",
+      "chars": 11999,
+      "categories": [
+        "操作系统"
+      ],
+      "tags": [
+        "uCore"
+      ],
+      "code_blocks": 9,
+      "more": false,
+      "file": "ucore-lab1.md"
+    },
+    {
+      "path": "2018/12/08/suibi-00",
+      "title": "随想——2018/12/8/22:13",
+      "date": "2018-12-08T22:10:58+08:00",
+      "chars": 2169,
+      "categories": [],
+      "tags": [
+        "闲话二三"
+      ],
+      "code_blocks": 0,
+      "more": false,
+      "file": "suibi-00.md"
+    },
+    {
+      "path": "2019/01/19/suibi-01",
+      "title": "实习小结",
+      "date": "2019-01-19T14:50:39+08:00",
+      "chars": 1276,
+      "categories": [],
+      "tags": [],
+      "code_blocks": 0,
+      "more": false,
+      "file": "suibi-01.md"
+    },
+    {
+      "path": "2019/04/06/biji-os-01",
+      "title": "趣谈Linux操作系统笔记01（对应03-06）",
+      "date": "2019-04-06T22:00:30+08:00",
+      "chars": 8844,
+      "categories": [],
+      "tags": [
+        "os"
+      ],
+      "code_blocks": 1,
+      "more": false,
+      "file": "biji-os-01.md"
+    },
+    {
+      "path": "2019/04/14/biji-os-02",
+      "title": "趣谈Linux操作系统笔记02（对应06-08）",
+      "date": "2019-04-14T21:08:48+08:00",
+      "chars": 3180,
+      "categories": [],
+      "tags": [
+        "os"
+      ],
+      "code_blocks": 0,
+      "more": false,
+      "file": "biji-os-02.md"
+    },
+    {
+      "path": "2019/05/16/suibi",
+      "title": "离职小结——2019/5/16/1:39",
+      "date": "2019-05-16T01:39:12+08:00",
+      "chars": 947,
+      "categories": [],
+      "tags": [
+        "随想"
+      ],
+      "code_blocks": 0,
+      "more": false,
+      "file": "suibi.md"
+    },
+    {
+      "path": "2020/03/02/alphaDB",
+      "title": "我有一个大胆的想法之单手撸数据库(I)",
+      "date": "2020-03-02T21:51:25+08:00",
+      "chars": 390,
+      "categories": [],
+      "tags": [],
+      "code_blocks": 0,
+      "more": false,
+      "file": "alphaDB.md"
+    },
+    {
+      "path": "2020/04/23/kubernetes",
+      "title": "围绕kubernetes的设计与源码探索之旅",
+      "date": "2020-04-23T17:47:47+08:00",
+      "chars": 494,
+      "categories": [],
+      "tags": [
+        "kubernetes"
+      ],
+      "code_blocks": 0,
+      "more": false,
+      "file": "kubernetes.md"
+    },
+    {
+      "path": "2021/08/27/2021-目标",
+      "title": "2021 目标",
+      "date": "2021-08-27T16:46:41+08:00",
+      "chars": 234,
+      "categories": [],
+      "tags": [
+        "2021"
+      ],
+      "code_blocks": 0,
+      "more": false,
+      "file": "2021-目标.md"
+    }
+  ],
+  "private": "3 posts kept out of the repository on purpose; see README",
+  "images": 106,
+  "about": true,
+  "site": {
+    "title": "The Tao of Jason",
+    "subtitle": "",
+    "author": "Jason",
+    "description": "",
+    "avatar": "/images/avatar.jpg",
+    "lang": "zh-Hans",
+    "generator": "Hexo 3.9.0",
+    "menu": [
+      [
+        "首页",
+        "/"
+      ],
+      [
+        "分类",
+        "/categories/"
+      ],
+      [
+        "归档",
+        "/archives/"
+      ],
+      [
+        "标签",
+        "/tags"
+      ],
+      [
+        "关于",
+        "/about"
+      ],
+      [
+        "搜索",
+        "javascript:;"
+      ]
+    ],
+    "social": {
+      "GitHub": "https://github.com/Belyenochi",
+      "E-Mail": "491537461q@gmail.com",
+      "Twitter": "https://twitter.com/JasonTomas13",
+      "zhihu": "https://www.zhihu.com/people/luo-yu-31-80/activities"
+    },
+    "scheme": "Muse",
+    "next_version": "5.1.4"
+  }
+}

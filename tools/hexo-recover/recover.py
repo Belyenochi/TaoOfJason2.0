@@ -31,7 +31,13 @@ PRIVATE = {
     "2021/05/19/love": "the author deleted this from the live site by hand on 2025-04-07",
     "2021/08/29/8.22": "a work weekly report, not a blog post",
     "2021/08/31/中间件平台开发流程规范": "empty body (2 characters); a stray draft",
-    "2021/08/27/2021-目标": "the author asked for it to come down (2026-09-03)",
+}
+
+# Posts that are not written anywhere, not even to _private/: the author asked
+# for them to be deleted outright. Listed so a re-run of this script cannot
+# resurrect them.
+DROP = {
+    "2021/08/27/2021-目标": "deleted at the author's request, 2026-09-03",
 }
 
 POST_DIR = re.compile(r"^\d{4}/\d{2}/\d{2}/[^/]+$")
@@ -590,6 +596,9 @@ def main(deploy_dir, out_dir):
     report = {"public": [], "private": [], "images": 0, "about": False}
     used_slugs = set()
     for p in posts:
+        if p["path"] in DROP:
+            report.setdefault("dropped", []).append({"path": p["path"], "why": DROP[p["path"]]})
+            continue
         p["has_more"] = False
         slug = p["slug"]
         if slug in used_slugs:

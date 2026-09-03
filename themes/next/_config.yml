@@ -1,0 +1,58 @@
+# Rebuilt for NexT 5.1.4, scheme Muse -- both read from the
+# footer of the deployed pages. The theme's own _config.yml was not in the
+# backup. Only settings that leave a visible trace in HTML are set here; the
+# rest is the theme default.
+scheme: Muse
+language: zh-Hans
+
+menu:
+  home: /
+  categories: /categories/
+  archives: /archives/
+  tags: /tags
+  about: /about
+  #search: /search/ || search  # rendered by local_search, not a page
+
+menu_icons:
+  enable: true
+
+avatar: /images/avatar.jpg
+
+social:
+  GitHub: https://github.com/Belyenochi
+  E-Mail: 491537461q@gmail.com
+  Twitter: https://twitter.com/JasonTomas13
+  zhihu: https://www.zhihu.com/people/luo-yu-31-80/activities
+
+local_search:
+  enable: true
+  trigger: auto
+  top_n_per_article: 1
+
+# The index pages of the deployed site show a "阅读全文 »" button on every
+# post while no post page has an <a id="more"> anchor, which is exactly what
+# this option produces. length is the theme default; the measured excerpts
+# on the original index agree with it.
+auto_excerpt:
+  enable: true
+  length: 150
+# Every read-more button on the original index links to <post>/#more; in
+# post.swig that suffix is emitted only when this is on.
+scroll_to_more: true
+
+# Top level, not under codeblock: that nesting is NexT 7. In 5.x the stylus
+# variables for the code gutter ($highlight-gutter) are derived from this key,
+# and with it missing main.css fails to compile at highlight.styl:79.
+highlight_theme: normal
+
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at: true
+  categories: true
+
+footer:
+  powered: true
+  theme:
+    enable: true
+    version: true

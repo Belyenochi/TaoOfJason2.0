@@ -272,7 +272,8 @@ bad:
 
 ### 6 实现函数调用堆栈跟踪函数
 
-这里的代码根据注释不难写出。  
+这里的代码根据注释不难写出。
+
 ```
     void print_stackframe(void) {
         uint32_t ebp=read_ebp();        //(1) call read_ebp() to get the value of ebp. the type is (uint32_t)
@@ -296,7 +297,8 @@ number, etc.
 运行结果如图所示：  
 ![](/images/ucore_01/5lab.jpg)
 
-ebp是栈底指针，从该地址为基准，向上（栈底方向）能获取返回地址、参数值，向下（栈顶方向）能获取函数局部变量值，而该地址处又存储着上一层函数调用时的ebp值，eip则是指令指针寄存器保存着下一条指令的地址,最后一行输出的信息是debug\_info，查看该函数定义：  
+ebp是栈底指针，从该地址为基准，向上（栈底方向）能获取返回地址、参数值，向下（栈顶方向）能获取函数局部变量值，而该地址处又存储着上一层函数调用时的ebp值，eip则是指令指针寄存器保存着下一条指令的地址,最后一行输出的信息是debug\_info，查看该函数定义：
+
 ```
 void print_debuginfo(uintptr_t eip) {
     struct eipdebuginfo info;
@@ -317,7 +319,8 @@ void print_debuginfo(uintptr_t eip) {
 ```
 
 可以看出最行一行输出的信息是源码所在文件名，源码所在行数（eip指向的指令对应），函数名，源码的长度（当前指令执行位置-函数起始位置）或者是不合法的eip（没找到eip对应的info，这里的info就是eipdebuginfo数据结构）  
-最后一个0x00007d63不合法的原因是我们还没有写内存管理模块（没有引入虚拟地址的抽象）…这里程序的堆栈空间范围在0&#126;0x7c00(在bootasm.S中,感谢TsushimaAlice同学告知)所以超出堆栈的行为是未定义的  
+最后一个0x00007d63不合法的原因是我们还没有写内存管理模块（没有引入虚拟地址的抽象）…这里程序的堆栈空间范围在0&#126;0x7c00(在bootasm.S中,感谢TsushimaAlice同学告知)所以超出堆栈的行为是未定义的
+
 ```
 void
 kern_init(void){
@@ -365,7 +368,8 @@ kern_init(void){
 
 #### 7.2 初始化idt
 
-中的SETGATE宏，填充idt数组内容。每个中断的入口由tools/vectors.c生成，使用trap.c中声明的vectors数组即可。  
+中的SETGATE宏，填充idt数组内容。每个中断的入口由tools/vectors.c生成，使用trap.c中声明的vectors数组即可。
+
 ```
 void idt_init(void)
 {

@@ -48,7 +48,8 @@ select(treeIterator, condition， result) {
 
 迭代器的本质是延迟求值或者说部分求值（令我想到了SICP的流模型），那么由于传统的程序执行比如递归，你是无法控制程序的控制流的，拿之前的递归遍历树的例子来看，你无法在它遍历到某个子树（这时这个子树的左右节点还存在）的情况下马上回到根节点的，这是因为受限于函数的调用栈，当然你可以通过cps变换来手动控制你的代码，这是另外一回事，这里暂不予展开。既然我们不能控制函数调用栈，那我们就一不做二不休的自己创建栈来模拟之前的遍历函数运行，这样代码就在我们的掌控下了（基于栈的程序控制其实体现着栈式虚拟机的思想，通过push和pop来控制”计算”，而CPS变换更多的体现的是续算（continuation）的传递，PL的魔法啦）
 
-接下来我们可以看看，基于栈的非递归遍历实现  
+接下来我们可以看看，基于栈的非递归遍历实现
+
 ```javascript
 // 基于栈的非递归查询算法的实现
 function inorder_tarverse_nonrecursive(node,condition,result) {
@@ -83,7 +84,8 @@ function inorder_tarverse_nonrecursive(node,condition,result) {
 }
 ```
 
-这里给出递归实现以做对比  
+这里给出递归实现以做对比
+
 ```javascript
 function inorder_traverse(node,condition,result) {
 	if (node) {
@@ -111,7 +113,8 @@ function inorder_traverse(node,condition,result) {
 
 既然现在我们已经能够用栈来模拟控制流，这也意味着对程序的遍历的控制已经完全受制于我们（这里的完全受制是逻辑上的，屏蔽底层编译的细节），我们终于摆脱了了call stack :)
 
-现在我们可以肆意的操控我们的遍历程序,接下来用闭包保存栈，每次next调用pop一次来实现迭代  
+现在我们可以肆意的操控我们的遍历程序,接下来用闭包保存栈，每次next调用pop一次来实现迭代
+
 ```javascript
 function makeTreeIterator(node){
 	let controlStack = [];
@@ -149,7 +152,8 @@ function makeTreeIterator(node){
 }
 ```
 
-拉出迭代器遛遛  
+拉出迭代器遛遛
+
 ```javascript
 let tree = {
 	value: 5,
@@ -180,7 +184,8 @@ console.log(result); // [4]
 ```
 
 还有一种实现迭代器的方法就是使用continuation来实现控制反转啦&#126;  
-下一篇博客会去讲解如何用continuation来实现迭代器，这里先用ES6的generator来预热  
+下一篇博客会去讲解如何用continuation来实现迭代器，这里先用ES6的generator来预热
+
 ```javascript
 function* inOrder(node) {
 	let x;

@@ -155,7 +155,8 @@ linux里进程的创建是通过fork父进程完成的，关于fork的详细用�
 
 #### 3.8 课堂练习
 
-以执行strace cat /dev/null 为例  
+以执行strace cat /dev/null 为例
+
 ```
 execve("/usr/bin/cat", ["cat", "/dev/null", "-o", "/root/straceout.txt"], [/* 23 vars */]) = 0
 brk(NULL)                               = 0x1cda000

@@ -45,25 +45,29 @@ images, links, code blocks, emphasis) identical in all 25. The `<p>` count is
 excluded: bare text nodes in the original become paragraphs in Markdown, which
 is not a content difference.
 
-## Rendering with Hexo 3.9 on a current Node
+The same check was then run against the site as rebuilt with **Hexo 8.1.2 +
+NexT 8.29.0** (the toolchain this repository now uses): 24 of 25 bodies
+identical once spaces are removed, structure counts identical in 24 of 25. The
+one difference was `**[本篇]**` glued to a word, which the old marked accepted
+and CommonMark does not; the converter now emits `<strong>` for that shape.
 
-Hexo 3.9 does not run on Node 24 (`util.isDate` was removed), and on Node 18
-`hexo generate` renders every route correctly but writes every file as 0 bytes.
-`hexo-recover-generate.js` in the output directory renders each route through
-the Hexo API and writes it with plain `fs`. Run it as:
+### The old toolchain, for the record
 
-```
-cd <out> && npx -y -p node@18.20.8 -c 'node hexo-recover-generate.js'
-```
+The first verification used the versions the site was actually published with,
+Hexo 3.9.0 and NexT v5.1.4 from `iissnan/hexo-theme-next`. Getting that to run
+on a current machine took three workarounds, kept here in case anyone needs to
+reproduce the original bytes:
 
-Dependencies that had to be pinned for NexT 5 (`package.json` records them):
-`hexo-renderer-swig` (NexT 5 templates are swig; without the renderer pages
-are empty with no error) and `stylus@0.54.5` (newer stylus fails on
-`highlight.styl`).
+- Hexo 3.9 does not start on Node 24 (`util.isDate` was removed); use Node 18.
+- On Node 18 `hexo generate` renders every route correctly but writes every file
+  as 0 bytes. Render through the Hexo API and write with `fs` instead
+  (a 30-line script; it lived in the output dir as `hexo-recover-generate.js`).
+- NexT 5 templates are swig, so `hexo-renderer-swig` is required -- without it
+  pages are empty with no error -- and stylus must be `0.54.5`.
 
-This toolchain is for verification. A blog that is going to be maintained again
-should move to a current Hexo and NexT; the recovered Markdown does not depend
-on the old versions.
+`next5_config.yml` alongside this file is the NexT 5 theme config as
+reconstructed from the HTML; `_config.next.yml` at the repo root is its NexT 8
+translation.
 
 ## Things learned from the HTML that were not in any config
 

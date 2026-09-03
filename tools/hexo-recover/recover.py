@@ -231,11 +231,11 @@ class Converter:
         if name == "img":
             return self.img(n)
         if name in ("strong", "b"):
-            return "**" + self.inline_children(n).strip() + "**"
+            return self.emphasis(n, "**", "strong")
         if name in ("em", "i"):
             if any(c.startswith("fa") for c in cls):  # icon fonts
                 return ""
-            return "*" + self.inline_children(n).strip() + "*"
+            return self.emphasis(n, "*", "em")
         if name in ("del", "s"):
             return "~~" + self.inline_children(n).strip() + "~~"
         if name == "code":
@@ -252,6 +252,25 @@ class Converter:
             # block inside inline context (e.g. inside <li>) -- caller handles
             return self.block(n)
         return self.inline_children(n)
+
+    _PUNCT_START = re.compile(r"^[\\\[\](){}<>\"'!?.,:;#*_~`|-]")
+
+    def emphasis(self, n, marks: str, tag: str) -> str:
+        """`**text**` -- unless the text begins with punctuation and the run is
+        glued to a word on the left, e.g. 为何物**[本篇]**. CommonMark then says
+        the opening `**` is not left-flanking and refuses to open emphasis;
+        the old marked did not care, the current one follows the spec and
+        printed the asterisks literally in parser_00. An HTML tag says the
+        same thing in both and keeps the text byte-identical."""
+        inner = self.inline_children(n).strip()
+        if not inner:
+            return ""
+        prev = n.previous_sibling
+        glued_left = isinstance(prev, NavigableString) and str(prev)[-1:].strip() != "" \
+            and not self._PUNCT_START.match(str(prev)[-1:])
+        if glued_left and self._PUNCT_START.match(inner):
+            return f"<{tag}>{inner}</{tag}>"
+        return f"{marks}{inner}{marks}"
 
     def img(self, n) -> str:
         src = n.get("data-src") or n.get("src", "")

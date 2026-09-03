@@ -7,7 +7,3 @@ db.json
 # work weekly report, and an empty stray draft. They live in the local working
 # copy only.
 _private/
-# The theme itself is not vendored. NexT v5.1.4 is cloned into themes/next;
-# only our _config.yml for it is tracked.
-themes/next/*
-!themes/next/_config.yml

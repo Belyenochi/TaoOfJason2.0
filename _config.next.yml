@@ -1,0 +1,103 @@
+# NexT 8 theme config, in the Hexo 5+ location (root _config.next.yml) so the
+# theme package under node_modules stays untouched.
+#
+# Every value here reproduces something visible on the old site (NexT 5.1.4,
+# scheme Muse): the menu, the four social links, the avatar, the read-more
+# button on every index entry, the visitor counter. Anything not listed is the
+# NexT 8 default. The full reference is node_modules/hexo-theme-next/_config.yml.
+
+scheme: Muse
+
+favicon:
+  small: /favicon.ico
+  medium: /favicon.ico
+  apple_touch_icon: /images/apple-touch-icon-next.png
+
+menu:
+  home: / || fa fa-home
+  categories: /categories/ || fa fa-th
+  archives: /archives/ || fa fa-archive
+  tags: /tags/ || fa fa-tags
+  about: /about/ || fa fa-user
+
+menu_settings:
+  icons: true
+  badges: false
+
+avatar:
+  url: /images/avatar.jpg
+  rounded: false
+  rotated: false
+
+site_state: true
+
+social:
+  GitHub: https://github.com/Belyenochi || fab fa-github
+  E-Mail: mailto:491537461q@gmail.com || fa fa-envelope
+  Twitter: https://twitter.com/JasonTomas13 || fab fa-twitter
+  知乎: https://www.zhihu.com/people/luo-yu-31-80/activities || fab fa-zhihu
+
+social_icons:
+  enable: true
+  icons_only: false
+  transition: false
+
+toc:
+  enable: true
+  number: true
+  wrap: false
+  expand_all: false
+  max_depth: 6
+
+footer:
+  since: 2018
+  icon:
+    name: fa fa-heart
+    animated: false
+    color: "#ff0000"
+  copyright:
+  powered: true
+
+# Shown on the index: the auto excerpt (hexo-auto-excerpt) and a read-more
+# button, which is what every entry on the old index had.
+excerpt_description: true
+read_more_btn: true
+
+post_meta:
+  item_text: true
+  created_at: true
+  # The old pages showed only the creation date.
+  updated_at:
+    enable: false
+    another_day: true
+  categories: true
+
+codeblock:
+  theme:
+    light: default
+    dark: stackoverflow-dark
+  copy_button:
+    enable: true
+    style: flat
+
+back2top:
+  enable: true
+  sidebar: false
+  scrollpercent: false
+
+# The old pages loaded busuanzi for the visitor counter.
+busuanzi_count:
+  enable: true
+  total_visitors: true
+  total_visitors_icon: fa fa-user
+  total_views: true
+  total_views_icon: fa fa-eye
+  post_views: true
+  post_views_icon: far fa-eye
+
+local_search:
+  enable: true
+  trigger: auto
+  top_n_per_article: 1
+  unescape: false
+  preload: false

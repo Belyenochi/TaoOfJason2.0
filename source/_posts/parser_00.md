@@ -19,7 +19,7 @@ tags:
 
 本系列旨在学习各种parser思路及技巧，分为以下几个部分
 
-1. [ 清晨入古寺—-论世间parser为何物**\[本篇\]**](https://belyenochi.github.io/2018/08/28/parser_00/#more)
+1. [ 清晨入古寺—-论世间parser为何物<strong>\[本篇\]</strong>](https://belyenochi.github.io/2018/08/28/parser_00/#more)
 2. [ 初日照高林—-初探First集，Follow集 ](https://belyenochi.github.io/2018/09/03/parser_01/#more)
 3. [ 曲径通幽处—-预测分析表的构建 ](https://belyenochi.github.io/2018/09/04/parser_02/#more)
 4. [ 禅房花木深—-实现LL(1) parser ](https://belyenochi.github.io/2018/09/04/parser_06/#more)

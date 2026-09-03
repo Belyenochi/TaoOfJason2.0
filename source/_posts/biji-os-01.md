@@ -98,56 +98,56 @@ systemctl start mysql
 linux里进程的创建是通过fork父进程完成的，关于fork的详细用法可以参考[这里](https://linux.die.net/man/2/fork)  
 关于fork可以引申出孤儿进程和僵尸进程
 
-- 孤儿进程 ：一个父进程退出，而它的一个或多个子进程还在运行，那么那些子进程将成为孤儿进程。孤儿进程将被init进程(进程号为1)所收养，并由init进程对它们完成状态收集工作。
-- 僵尸进程 ：一个进程使用fork创建子进程，如果子进程退出，而父进程并没有调用wait或waitpid获取子进程的状态信息，那么子进程的进程描述符仍然保存在系统中。这种进程称之为僵死进程。
+- 孤儿进程：一个父进程退出，而它的一个或多个子进程还在运行，那么那些子进程将成为孤儿进程。孤儿进程将被init进程(进程号为1)所收养，并由init进程对它们完成状态收集工作。
+- 僵尸进程：一个进程使用fork创建子进程，如果子进程退出，而父进程并没有调用wait或waitpid获取子进程的状态信息，那么子进程的进程描述符仍然保存在系统中。这种进程称之为僵死进程。
   ##### 3.1.2 execve
-  execve用来执行一个二进制可执行文件或者以#! interpreter \[optional-arg\]为开头的脚本，关于execve的详细用法可以参考 [这里](https://linux.die.net/man/2/execve)
+  execve用来执行一个二进制可执行文件或者以#! interpreter \[optional-arg\]为开头的脚本，关于execve的详细用法可以参考[这里](https://linux.die.net/man/2/execve)
   ##### 3.1.3 waitpid
-  waitpid用来等待进程改变状态，常用于父进程等待子进程结束，关于waitpid的详细用法可以参考 [这里](https://linux.die.net/man/2/waitpid)
+  waitpid用来等待进程改变状态，常用于父进程等待子进程结束，关于waitpid的详细用法可以参考[这里](https://linux.die.net/man/2/waitpid)
   #### 3.2 内存管理
   *从操作系统角度来看，进程分配内存有两种方式，分别由两个系统调用完成：brk和mmap（不考虑共享内存）。*
   ##### 3.2.1 brk
-  brk是将数据段(.data)的最高地址指针\_edata往高地址推，关于execve的详细用法可以参考 [这里](https://linux.die.net/man/2/brk)
+  brk是将数据段(.data)的最高地址指针\_edata往高地址推，关于execve的详细用法可以参考[这里](https://linux.die.net/man/2/brk)
   ##### 3.2.2 mmap
-  mmap是在进程的虚拟地址空间中（堆和栈中间，称为文件映射区域的地方）找一块空闲的虚拟内存，关于mmap更详细的用法可以参考 [这里](https://linux.die.net/man/3/mmap)
+  mmap是在进程的虚拟地址空间中（堆和栈中间，称为文件映射区域的地方）找一块空闲的虚拟内存，关于mmap更详细的用法可以参考[这里](https://linux.die.net/man/3/mmap)
   #### 3.3 文件管理
   *Linux里一切皆文件*
   ##### 3.3.1 open
-  open用于打开一个文件，关于open更详细的用法可以参考 [这里](https://linux.die.net/man/3/open)
+  open用于打开一个文件，关于open更详细的用法可以参考[这里](https://linux.die.net/man/3/open)
   ##### 3.3.2 close
-  close用于关闭一个文件，关于close更详细的用法可以参考 [这里](https://linux.die.net/man/3/close)
+  close用于关闭一个文件，关于close更详细的用法可以参考[这里](https://linux.die.net/man/3/close)
   ##### 3.3.3 creat
-  creat用于创建一个文件，关于creat更详细的用法可以参考 [这里](https://linux.die.net/man/3/creat)
+  creat用于创建一个文件，关于creat更详细的用法可以参考[这里](https://linux.die.net/man/3/creat)
   ##### 3.3.4 lseek
-  lseek用于跳到文件的某个位置，关于lseek更详细的用法可以参考 [这里](https://linux.die.net/man/3/lseek)
+  lseek用于跳到文件的某个位置，关于lseek更详细的用法可以参考[这里](https://linux.die.net/man/3/lseek)
   ##### 3.3.5 read
-  read用于读取某个文件，关于read更详细的用法可以参考 [这里](https://linux.die.net/man/3/read)
+  read用于读取某个文件，关于read更详细的用法可以参考[这里](https://linux.die.net/man/3/read)
   ##### 3.3.6 write
-  write用于读取某个文件，关于write更详细的用法可以参考 [这里](https://linux.die.net/man/3/write)
+  write用于读取某个文件，关于write更详细的用法可以参考[这里](https://linux.die.net/man/3/write)
   #### 3.4 信号处理
   ##### 3.4.1 kill
-  用户进程通过kill函数，将一个用户信号发送给另一个进程, **注意这里的kill是指代发送信号而不是杀死进程之类的…** ，关于sigaction更详细的用法可以参考 [这里](https://linux.die.net/man/3/kill)
+  用户进程通过kill函数，将一个用户信号发送给另一个进程,**注意这里的kill是指代发送信号而不是杀死进程之类的…**，关于sigaction更详细的用法可以参考[这里](https://linux.die.net/man/3/kill)
   ##### 3.4.2 sigaction
-  sigaction用于注册信号处理函数，用kill发送的信号可以在sigaction中注册相应的信号处理函数用以处理，关于sigaction更详细的用法可以参考 [这里](https://linux.die.net/man/3/sigaction)
+  sigaction用于注册信号处理函数，用kill发送的信号可以在sigaction中注册相应的信号处理函数用以处理，关于sigaction更详细的用法可以参考[这里](https://linux.die.net/man/3/sigaction)
   #### 3.5 进程间通信
   *内核可以通过消息队列来实现进程间通信*
   ##### 3.5.1 msgget
-  创建一个新的消息队列，关于msgget更详细的用法可以参考 [这里](https://linux.die.net/man/3/msgget)
+  创建一个新的消息队列，关于msgget更详细的用法可以参考[这里](https://linux.die.net/man/3/msgget)
   ##### 3.5.2 msgget
-  将消息发送到消息队列，关于msgget更详细的用法可以参考 [这里](https://linux.die.net/man/3/msgget)
+  将消息发送到消息队列，关于msgget更详细的用法可以参考[这里](https://linux.die.net/man/3/msgget)
   ##### 3.5.3 msgrcv
-  从消息队列中取出消息，关于msgget更详细的用法可以参考 [这里](https://linux.die.net/man/3/msgget)
+  从消息队列中取出消息，关于msgget更详细的用法可以参考[这里](https://linux.die.net/man/3/msgget)
   ##### 3.5.4 shmget
-  创建一个共享内存块，关于shmget更详细的用法可以参考 [这里](https://linux.die.net/man/3/shmget)
+  创建一个共享内存块，关于shmget更详细的用法可以参考[这里](https://linux.die.net/man/3/shmget)
   ##### 3.5.5 shmmat
-  将共享内存块映射到自己的内存空间（比如说自己的进程地址空间，关于shmmat更详细的用法可以参考 [这里](https://linux.die.net/man/3/shmmat)
+  将共享内存块映射到自己的内存空间（比如说自己的进程地址空间，关于shmmat更详细的用法可以参考[这里](https://linux.die.net/man/3/shmmat)
   ##### 3.5.6 sem\_wait
-  持有信号量，信号量-1，关于sem\_wait更详细的用法可以参考 [这里](https://linux.die.net/man/3/sem_wait)
+  持有信号量，信号量-1，关于sem\_wait更详细的用法可以参考[这里](https://linux.die.net/man/3/sem_wait)
   ##### 3.5.7 sem\_post
-  释放信号量，信号量+1，关于sem\_post更详细的用法可以参考 [这里](https://linux.die.net/man/3/sem_post)
+  释放信号量，信号量+1，关于sem\_post更详细的用法可以参考[这里](https://linux.die.net/man/3/sem_post)
   #### 3.6 网络通信
   ##### 3.6.1 socket
-  从tcp/ip 的解度看 socket ，它更多地体现了用户 API 与协议栈的一个中间层接口层。用户通过调用socket API 将报文递交给协议栈，或者从协议栈中接收报文件。关于socket更详细的用法可以参考 [这里](https://linux.die.net/man/3/socket)
+  从tcp/ip 的解度看 socket ，它更多地体现了用户 API 与协议栈的一个中间层接口层。用户通过调用socket API 将报文递交给协议栈，或者从协议栈中接收报文件。关于socket更详细的用法可以参考[这里](https://linux.die.net/man/3/socket)
 
 #### 3.7 小结
 

@@ -27,8 +27,15 @@ tags:
 对于任何给定的逻辑门，我们都能够从外部和内部两个不同方面进行观察，图1.4中右边的图给出了门的内部结构（或称为内部实现），而左边部分仅仅显示了门的外部接口（interface），也就是输入和输出管脚。内部结构仅仅与门电路的设计者相关，而外部结构则是其他设计者所关心的（也就是外部结构也就是我们常常使用的黑盒抽象，只关心输入输出），他们仅仅使用门电路的抽象而不去关心其内部结构。  
 下面总结两点关于逻辑设计的要素：
 
-1. 虽然逻辑设计（门电路设计者）的基本功能可以通过不同的的方式实现其外部接口，但从效率的角度上来说， **基本原则** 是用尽可能少的门来显示尽可能多的功能。
-2. 给定门的描述（外部接口），通过应用已经实现的门，找到有效的方法来实现它。 **因为本课程后续部分采用了HDL语言，所以这里简单的解释HDL语言：** chips(芯片)的HDL定义包括header部分和parts部分。 Header部分描述了芯片的接口(interface)，也就是芯片的名称、输入和输出管脚。 Pars部分描述了所有底层电路的名称和拓扑结构，这些电路是构成该芯片的基本部分，每个部分用一个statement(语句)来表示，它描述了该部分的名称与其他部分的连接方式。 为了简单明了的编写这些语句，HDL程序员必须有内在模块的接口文档，体现在project中就是注释了。 形如part’s pin name = chip’s pin name的含义是将芯片内部的管脚与外部管教相连，如此实现了芯片的输入输出。 更多关于HDL程序设计的内容可以参考《计算的要素》附录部分。
+1. 虽然逻辑设计（门电路设计者）的基本功能可以通过不同的的方式实现其外部接口，但从效率的角度上来说，**基本原则**是用尽可能少的门来显示尽可能多的功能。
+2. 给定门的描述（外部接口），通过应用已经实现的门，找到有效的方法来实现它。  
+   **因为本课程后续部分采用了HDL语言，所以这里简单的解释HDL语言：**  
+   chips(芯片)的HDL定义包括header部分和parts部分。  
+   Header部分描述了芯片的接口(interface)，也就是芯片的名称、输入和输出管脚。  
+   Pars部分描述了所有底层电路的名称和拓扑结构，这些电路是构成该芯片的基本部分，每个部分用一个statement(语句)来表示，它描述了该部分的名称与其他部分的连接方式。  
+   为了简单明了的编写这些语句，HDL程序员必须有内在模块的接口文档，体现在project中就是注释了。  
+   形如part’s pin name = chip’s pin name的含义是将芯片内部的管脚与外部管教相连，如此实现了芯片的输入输出。  
+   更多关于HDL程序设计的内容可以参考《计算的要素》附录部分。
 
 ### 4 为什么使用逻辑门
 
@@ -38,13 +45,23 @@ tags:
 
 项目地址[https://github.com/Belyenochi/nand2tetris](https://github.com/Belyenochi/nand2tetris)
 
-1. And ![](/images/jsys_01/And.png)
-2. And16 ![](/images/jsys_01/And16.png)
-3. Dmux ![](/images/jsys_01/DMux.png)
-4. DMux4Way ![](/images/jsys_01/DMux4Way.png)
-5. DMux8Way ![](/images/jsys_01/DMux8Way.png)
-6. Mux ![](/images/jsys_01/Mux.png)
-7. Mux4Way16 ![](/images/jsys_01/Mux4Way16.png)
-8. Not ![](/images/jsys_01/Not.png)
-9. Or ![](/images/jsys_01/Or.png)
-10. Xor ![](/images/jsys_01/Xor.png)
+1. And  
+   ![](/images/jsys_01/And.png)
+2. And16  
+   ![](/images/jsys_01/And16.png)
+3. Dmux  
+   ![](/images/jsys_01/DMux.png)
+4. DMux4Way  
+   ![](/images/jsys_01/DMux4Way.png)
+5. DMux8Way  
+   ![](/images/jsys_01/DMux8Way.png)
+6. Mux  
+   ![](/images/jsys_01/Mux.png)
+7. Mux4Way16  
+   ![](/images/jsys_01/Mux4Way16.png)
+8. Not  
+   ![](/images/jsys_01/Not.png)
+9. Or  
+   ![](/images/jsys_01/Or.png)
+10. Xor  
+    ![](/images/jsys_01/Xor.png)

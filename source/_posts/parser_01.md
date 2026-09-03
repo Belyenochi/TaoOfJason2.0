@@ -83,7 +83,8 @@ function S() {
 - First(Y1Y2..Yk) is either
   - First(Y1) (if First(Y1) doesn’t contain ε)
   - OR (if First(Y1) does contain ε) then First (Y1Y2..Yk) is everything in First(Y1) as well as everything in First(Y2..Yk)
-  - If First(Y1) First(Y2)..First(Yk) all contain ε then add ε to First(Y1Y2..Yk) as well.
+  - If First(Y1) First(Y2)..First(Yk) all contain ε then add ε  
+    to First(Y1Y2..Yk) as well.
 
 #### 2.2 follow集的构造
 

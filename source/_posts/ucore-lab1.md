@@ -80,7 +80,9 @@ $(call create_target,bootblock)
 #### 2.2 一个被系统认为是符合规范的硬盘主引导扇区的特征是什么？
 
 1. 主引导记录MBR的大小为512字节
-2. MBR结束字为\[0x55 0xAA\] 在tool/sign.c中可以很清晰的看到MBR的结束标志字（55AA）2字节以及主引导记录大小512字节 ![](/images/ucore_01/MBR.jpg)
+2. MBR结束字为\[0x55 0xAA\]  
+   在tool/sign.c中可以很清晰的看到MBR的结束标志字（55AA）2字节以及主引导记录大小512字节  
+   ![](/images/ucore_01/MBR.jpg)
    ### 3 调试BIOS的加载
 
 实验步骤如下：
@@ -90,7 +92,10 @@ $(call create_target,bootblock)
 3. target remote localhost:1234 # gdb连接qemu（也可忽略前三步直接make debug）
 4. 输入 b \*0x7c00设置断点
 5. continue
-6. x/i $pc # 查看一条当前的指令 可以看到0x7c00处的代码和bootasm.S处的代码一致 ![](/images/ucore_01/init.jpg) ![](/images/ucore_01/bootasm.jpg)
+6. x/i $pc # 查看一条当前的指令  
+   可以看到0x7c00处的代码和bootasm.S处的代码一致  
+   ![](/images/ucore_01/init.jpg)  
+   ![](/images/ucore_01/bootasm.jpg)
 
 ### 4 分析bootloader进入保护模式的过程
 

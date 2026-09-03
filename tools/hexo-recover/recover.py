@@ -31,6 +31,7 @@ PRIVATE = {
     "2021/05/19/love": "the author deleted this from the live site by hand on 2025-04-07",
     "2021/08/29/8.22": "a work weekly report, not a blog post",
     "2021/08/31/中间件平台开发流程规范": "empty body (2 characters); a stray draft",
+    "2021/08/27/2021-目标": "the author asked for it to come down (2026-09-03)",
 }
 
 POST_DIR = re.compile(r"^\d{4}/\d{2}/\d{2}/[^/]+$")
